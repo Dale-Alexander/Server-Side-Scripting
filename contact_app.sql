@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `companies`
 --
 
-CREATE TABLE `companies` (
+CREATE OR ALTER TABLE `companies` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
@@ -50,7 +50,7 @@ INSERT INTO `companies` (`id`, `name`, `address`, `website`, `email`, `created_a
 -- Table structure for table `contacts`
 --
 
-CREATE TABLE `contacts` (
+CREATE OR ALTER TABLE `contacts` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
@@ -75,7 +75,7 @@ INSERT INTO `contacts` (`id`, `first_name`, `last_name`, `email`, `address`, `co
 -- Table structure for table `failed_jobs`
 --
 
-CREATE TABLE `failed_jobs` (
+CREATE OR ALTER TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `uuid` varchar(255) NOT NULL,
   `connection` text NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE `failed_jobs` (
 -- Table structure for table `migrations`
 --
 
-CREATE TABLE `migrations` (
+CREATE OR ALTER TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
   `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL
@@ -115,7 +115,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- Table structure for table `password_reset_tokens`
 --
 
-CREATE TABLE `password_reset_tokens` (
+CREATE  OR ALTER TABLE `password_reset_tokens` (
   `email` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
@@ -127,7 +127,7 @@ CREATE TABLE `password_reset_tokens` (
 -- Table structure for table `personal_access_tokens`
 --
 
-CREATE TABLE `personal_access_tokens` (
+CREATE OR ALTER TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `tokenable_type` varchar(255) NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
@@ -146,7 +146,7 @@ CREATE TABLE `personal_access_tokens` (
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE OR ALTER TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,

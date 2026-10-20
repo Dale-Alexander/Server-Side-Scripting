@@ -7,6 +7,6 @@
 
 <div>
     <li><a href =  "{{route('contacts.index')}}">All Contacts</a></li>
-    <li><a href =  "{{route('contacts.create')}}">All Contact</a></li>
-    <li><a href =  "{{route('contacts.show', 1)}}">Show a contact</a></li>
+    <li><a href =  "{{route('contacts.create')}}">Add Contact</a></li>
+    <li><a href =  "{{route('contacts.show', 2)}}">Show a contact</a></li>
 </div>
