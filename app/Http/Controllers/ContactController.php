@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+
 class ContactController extends Controller
 {
     public function index()
@@ -16,7 +18,8 @@ class ContactController extends Controller
 
     public function show($id)
     {
-        return view('contacts.show', ['id' => $id]);
+        $contact = Contact::find($id);
+        return view('contacts.show', compact('contact'));
     }
 
     public function edit($id)

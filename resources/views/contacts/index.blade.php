@@ -1,7 +1,8 @@
-@extends('layouts.main')
+<h1>All Contacts</h1>
 
-@section('content')
-<h1> All Contacts</h1>
-<a href="{{route('contacts.create')}}">Add New</a>
-<a href="{{route('contacts.show', 1)}}">Show contact</a>
-@endsection
+<li><a href = "{{route('contacts.create')}}"> Add new Contact </a></li>
+<!-- The above curly braces is called blade php syntax. It is the blade language.
+It is a way to embed php and html together -->
+<li><a href = "{{route('contacts.show', 2)}}">
+    Show Contact
+</a></li>
