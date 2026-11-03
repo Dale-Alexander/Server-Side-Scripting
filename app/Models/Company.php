@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     use HasFactory;
+    // Enable mass assignment
+    protected $fillable = ['name', 'address', 'website', 'email'];
 }
