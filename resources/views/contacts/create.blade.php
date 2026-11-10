@@ -15,10 +15,7 @@
                     <div class="form-group row">
                       <label for="first_name" class="col-md-3 col-form-label">First Name</label>
                       <div class="col-md-9">
-                        <input type="text" name="first_name" id="first_name" class="form-control is-invalid">
-                        <div class="invalid-feedback">
-                          Please choose a username.
-                        </div>
+                        <input type="text" name="first_name" id="first_name" class="form-control">
                       </div>
                     </div>
 
@@ -54,9 +51,11 @@
                       <div class="col-md-9">
                         <select name="company_id" id="company_id" class="form-control">
                           <option value="">Select Company</option>
-                          <option value="1">Company One</option>
-                          <option value="2">Company Two</option>
-                          <option value="3">Company Three</option>
+                            @foreach($companies as $company)
+                                <option value="{{ $company->id }}">
+                                    {{ $company->name }}
+                                </option>
+                            @endforeach
                         </select>
                       </div>
                     </div>
